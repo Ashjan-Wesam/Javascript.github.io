@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+       <script>
+
+        // Task 1
+
+        function checkNum(){
+
+            var number = Math.floor(Math.random()*10) + 1;
+            var userInput = document.getElementById('number').value;
+
+
+            document.getElementById('validNum').innerHTML = 'You hava entered ' + userInput+ ' and the valid number is '+number;
+
+            if(number == userInput){
+
+                document.getElementById('validOrInvalid').innerHTML = 'Good Work';
+
+
+            }
+
+            else{
+
+                document.getElementById('validOrInvalid').innerHTML = 'Not Matched';
+                
+            }
+        }
+
+        // End Task 1
+
+        // -------------------------------------------------------------------------
+
+        // Task 2
+
+        var index = 0;
+        var array = Array();
+
+        function add_element_to_array(){
+ 
+            array[index] = document.getElementById("num").value;
+            alert("The " + (index + 1) +" element is: " + array[index]);
+            index++;
+            document.getElementById("text1").value = "";
+        }
+
+        function display_array(){
+  
+            var display = "";   
+    
+            for (var i = 0 ; i < array.length ; i++){
+                
+                display += "Element " + (i+1) + " = " + array[i] + "<br/>";
+            }
+          
+            document.getElementById("result").innerHTML = display;
+        }
+
+        // End Task 2
+
+
+     
+
+    </script>
+</head>
+<body>
+
+    <!-- Task 1 -->
+
+    <form action="">
+
+        <fieldset>
+            <legend><h3>Task 1</h3></legend>
+
+            <h3>Enter Randomly Integer between 1 - 10</h3>
+            <input type="text" name="" id="number">
+            <input type="button" value="submit" onclick="checkNum()">
+        </fieldset>
+    </form>
+    
+    <p id="validNum"></p>
+
+    <p id="validOrInvalid"></p>
+
+    <!-- End Task 1 -->
+
+    <!-- ---------------------------------------------------------- -->
+
+    <!-- Task 2 -->
+
+    <form action="">
+
+        <fieldset>
+            <legend><h3>Task 2</h3></legend>
+
+            <input type="text" name="" id="num">
+            <input type="button" value="Add" id="addBtn" onclick="add_element_to_array()">
+            <input type="button" value="Display" id="displayBtn" onclick=" display_array()">
+            <p id="result"></p>
+
+
+        </fieldset>
+
+    </form>
+
+    <!-- End Task 2 -->
+
+
+    
+</body>
+</html>
